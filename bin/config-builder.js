@@ -159,9 +159,6 @@ var configStats = configurator.getStats();
 var log = configStats.not_found.length > 0 ? console.error : console.log;
 log('%d substitutions, %d not found: %s', configStats.substitutions, configStats.not_found.length, configStats.not_found);
 
-if (configStats.not_found.length > 0) {
-    process.exit(1);
-}
 
 var outputs = [];
 if (options.configOut) {
